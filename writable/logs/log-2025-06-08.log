@@ -1,0 +1,14 @@
+CRITICAL - 2025-06-08 21:42:36 --> ValueError: strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack)
+[Method: POST, Route: auth/save]
+in SYSTEMPATH\Validation\Validation.php on line 970.
+ 1 SYSTEMPATH\Validation\Validation.php(970): strpos('required|valid_email|is_unique[users.email', '|', 43)
+ 2 SYSTEMPATH\Validation\Validation.php(611): CodeIgniter\Validation\Validation->splitRules([...])
+ 3 SYSTEMPATH\Controller.php(182): CodeIgniter\Validation\Validation->setRules([...], [])
+ 4 SYSTEMPATH\Controller.php(136): CodeIgniter\Controller->setValidator([...], [])
+ 5 APPPATH\Controllers\Auth.php(19): CodeIgniter\Controller->validate([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
